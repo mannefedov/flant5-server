@@ -104,7 +104,7 @@ def match_artists(data: Query):
         attention_mask=inputs["attention_mask"].to(torch.device('cuda:3')),
         do_sample=True,  # disable sampling to test if batching affects output
     )
-    answer = output_sequences[0]
+    answer = tokenizer.batch_decode(output_sequences, skip_special_tokens=True)[0]
     if answer == "No Answer":
         answer = ""
 
