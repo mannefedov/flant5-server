@@ -1,0 +1,10 @@
+torch
+torchvision
+torchaudio
+accelerate
+Sentencepiece
+bitsandbytes
+git+https://github.com/huggingface/transformers
+fastapi
+uvicorn[standard]
+pydantic
